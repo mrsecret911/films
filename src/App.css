@@ -1,0 +1,119 @@
+.App {
+  display: flex;
+  position: relative;
+}
+
+.film-preview-mode {
+  left: calc(-100% + 150px);
+}
+
+.film-poster {
+  max-width: 100px;
+}
+
+
+.content {
+  overflow: auto;
+  width: 100%;
+}
+
+.navigation__item {
+  color: #4e4e4e;
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.navigation__item:focus {
+  outline: none;
+  color: white;  
+}
+
+.navigation__item:focus::after {
+  content: '>';
+  color: orange;
+}
+
+.list-of-films {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  color: white;
+  padding: 20px;
+}
+
+.list-of-films__item {
+  width: calc(20% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 30%;
+  margin: 5px;
+  height: 0;
+}
+
+.list-of-films__item img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.list-of-films__item:focus {
+  outline: 2px solid orange;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.film-preview {
+  color: #fff;
+}
+
+.film-preview {
+  flex-direction: column;
+  position: absolute;
+  width: calc(100% - 150px);
+  left: 100%;
+  top: 0;
+  padding-left: 50px;
+  display: flex;
+}
+
+.film-preview__info {
+  display: flex;
+}
+
+.film-preview__overview {
+  padding: 0 20px;
+  margin: 0;
+}
+
+.film-preview button {
+  padding: 10px;
+  border: 0;
+  margin-right: 5px;
+}
+
+.film-preview button:focus {
+  outline: none;
+  background: orange;
+}
+
+.film-preview__video-wrap {
+  flex: 1 0 60%;
+}
+
+.film-preview__video-wrap img {
+  max-width: 100%;
+}
